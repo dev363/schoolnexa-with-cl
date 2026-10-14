@@ -1,0 +1,6 @@
+{
+  "name": "SchoolNexa",
+  "description": "SchoolNexa School Management SaaS ERP with automated clash-free constraint-based Timetable Generator, multi-tenant isolation, RBAC, and academic operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

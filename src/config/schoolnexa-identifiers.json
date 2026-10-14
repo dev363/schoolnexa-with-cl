@@ -1,0 +1,218 @@
+{
+  "version": "1.0.0",
+  "description": "SchoolNexa centralized identifier and code standards",
+
+  "businessCodes": {
+    "faculty": {
+      "prefix": "FAC-",
+      "rawPrefix": "FAC",
+      "examples": ["FAC-1001", "FAC-1002"],
+      "purpose": "Faculty / Teacher Employee Code",
+      "generator": "generateNextTeacherId"
+    },
+
+    "admission": {
+      "prefix": "ADM-",
+      "rawPrefix": "ADM",
+      "format": "ADM-YYYY-NNN",
+      "examples": ["ADM-2026-001", "ADM-2026-002"],
+      "purpose": "Student Admission Number"
+    },
+
+    "studentReference": {
+      "prefix": "STU-",
+      "rawPrefix": "STU",
+      "format": "STU-NNNNNN",
+      "examples": ["STU-000123"],
+      "purpose": "Student Reference Code / Search Token"
+    },
+
+    "teacherLegacy": {
+      "prefix": "TCH-",
+      "rawPrefix": "TCH",
+      "format": "TCH-NNNNNN",
+      "examples": ["TCH-000101"],
+      "purpose": "Legacy Teacher Staff Code"
+    },
+
+    "enrollment": {
+      "prefix": "ENL-",
+      "rawPrefix": "ENL",
+      "alternatePrefix": "enr-",
+      "format": "enr-NNN",
+      "examples": ["enr-001", "enr-oak-01"],
+      "purpose": "Enrollment Record Identifier"
+    },
+
+    "nationalIdentity": {
+      "prefix": "NAT-",
+      "rawPrefix": "NAT",
+      "examples": ["NAT-IND-4521", "NAT-AUTOGEN"],
+      "purpose": "National Identification Number"
+    },
+
+    "birthCertificate": {
+      "prefix": "BC-",
+      "rawPrefix": "BC",
+      "examples": ["BC-DEL-154", "BC-CHE-890"],
+      "purpose": "Birth Certificate Number"
+    },
+
+    "academicYear": {
+      "prefix": "AY-",
+      "rawPrefix": "AY",
+      "examples": ["AY-25-26", "ay-oak-2025"],
+      "purpose": "Academic Year Session Code"
+    },
+
+    "grade": {
+      "prefix": "G-",
+      "rawPrefix": "G",
+      "format": "G-NN",
+      "examples": ["G-06", "G-08", "G-10"],
+      "purpose": "Class / Grade Code"
+    }
+  },
+
+  "internalIds": {
+    "staff": {
+      "prefix": "stf-",
+      "examples": ["stf-oak-01", "stf-oak-02"],
+      "purpose": "Staff / Teacher relational ID",
+      "database": {
+        "table": "staff",
+        "column": "id",
+        "type": "varchar(36)"
+      }
+    },
+
+    "student": {
+      "prefix": "stu-",
+      "examples": ["stu-oak-001", "stu-stx-001"],
+      "purpose": "Student relational ID"
+    },
+
+    "section": {
+      "prefix": "sec-",
+      "examples": ["sec-oak-8a", "sec-oak-10b"],
+      "purpose": "Section Identifier"
+    },
+
+    "class": {
+      "prefix": "cls-",
+      "examples": ["cls-oak-g8", "cls-oak-g10"],
+      "purpose": "Class Identifier"
+    },
+
+    "subject": {
+      "prefix": "sub-",
+      "examples": ["sub-oak-math", "sub-oak-eng"],
+      "purpose": "Subject Identifier"
+    },
+
+    "assignment": {
+      "prefix": "asg-",
+      "examples": ["asg-8a-ct", "asg-8a-math"],
+      "purpose": "Teacher Assignment Identifier"
+    },
+
+    "parent": {
+      "prefix": "par-",
+      "examples": ["par-001", "par-002"],
+      "purpose": "Parent / Guardian Identifier"
+    },
+
+    "parentStudent": {
+      "prefix": "ps-",
+      "examples": ["ps-001", "ps-002"],
+      "purpose": "Parent-Student Relationship ID"
+    },
+
+    "identity": {
+      "prefix": "ident-",
+      "examples": ["ident-001", "ident-002"],
+      "purpose": "Student Identity Identifier"
+    },
+
+    "timetable": {
+      "prefix": "tt-",
+      "examples": ["tt-FAC-1001-MON-1"],
+      "purpose": "Timetable Slot Identifier"
+    },
+
+    "period": {
+      "prefix": "per-",
+      "examples": ["per-01", "per-02"],
+      "purpose": "Period Slot Identifier"
+    },
+
+    "room": {
+      "prefix": "rm-",
+      "examples": ["rm-101", "rm-lab-1"],
+      "purpose": "Classroom / Room Identifier"
+    },
+
+    "school": {
+      "prefix": "sch-",
+      "alternatePrefix": "school-",
+      "examples": ["school-oakridge-01"],
+      "purpose": "School / Tenant Identifier"
+    },
+
+    "academicYear": {
+      "prefix": "ay-",
+      "examples": ["ay-oak-2025", "ay-2026-2027"],
+      "purpose": "Academic Year Internal Identifier"
+    },
+
+    "classSubject": {
+      "prefix": "cs-",
+      "examples": ["cs-8-math", "cs-9-sci"],
+      "purpose": "Class Subject Mapping Identifier"
+    },
+
+    "syllabus": {
+      "prefix": "syl-",
+      "examples": ["syl-8-math-2025", "syl-9-sci-2025"],
+      "purpose": "Syllabus Track Identifier"
+    },
+
+    "enrollment": {
+      "prefix": "enr-",
+      "examples": ["enr-rec-001-prev", "enr-1726000000000"],
+      "purpose": "Enrollment Record Identifier"
+    },
+
+    "teacherAssignment": {
+      "prefix": "asg-",
+      "examples": ["asg-8a-ct", "asg-8a-math"],
+      "purpose": "Teacher Assignment Identifier (Alias)"
+    }
+  },
+
+  "roles": {
+    "SUPER_ADMIN": {
+      "purpose": "Global platform administrator"
+    },
+    "SCHOOL_ADMIN": {
+      "purpose": "School-level administrator"
+    },
+    "TEACHER": {
+      "purpose": "Teaching staff"
+    },
+    "STUDENT": {
+      "purpose": "Enrolled learner"
+    },
+    "PARENT": {
+      "purpose": "Parent / Guardian"
+    }
+  },
+
+  "rules": {
+    "businessCodeAndInternalIdAreSeparate": true,
+    "facultyCodeMustNotBeUsedAsStaffId": true,
+    "staffIdMaximumLength": 36,
+    "useMockIdsInProduction": false,
+    "preserveStudentIdStrategy": true
+  }
+}

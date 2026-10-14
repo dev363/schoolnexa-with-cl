@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.cache/
+
+.env
+.env.*
+!.env.example
+
+*.min.js
+*.map
+
+prisma/migrations/

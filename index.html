@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('schoolnexa_theme') || 'dark';
+          document.documentElement.setAttribute('data-bs-theme', t);
+          document.documentElement.classList.add(t);
+        } catch (e) {}
+      })();
+    </script>
+    <title>SchoolNexa - Multi-School Management ERP</title>
+    <meta
+      name="description"
+      content="SchoolNexa School Management SaaS ERP with automated clash-free constraint-based Timetable Generator, multi-tenant isolation, RBAC, and academic operations."
+    />
+    <meta property="og:title" content="SchoolNexa - Multi-School Management ERP" />
+    <meta
+      property="og:description"
+      content="SchoolNexa School Management SaaS ERP with automated clash-free constraint-based Timetable Generator, multi-tenant isolation, RBAC, and academic operations."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
